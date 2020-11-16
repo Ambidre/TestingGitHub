@@ -40,6 +40,7 @@ public class MainPageTest {
     }
 
     @Test
+    //Проверка поведения системы на ввод неверного e-mail
     public void signUpInvalidEmailTest(){
         SignUpPage signUpPage = mainPage.register("qeqwe", "qweq", "password1");
         String error = signUpPage.getEmailErrorText();
