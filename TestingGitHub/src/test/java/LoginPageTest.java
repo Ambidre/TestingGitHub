@@ -22,6 +22,7 @@ public class LoginPageTest {
     }
 
     @Test
+    //Попытка входа с пустыми полями
     public void loginWithEmptyCredsTest(){
         LoginPage newLoginPage = loginPage.loginWithInvalidCreds("","");
         String error = newLoginPage.getErrorText();
@@ -29,6 +30,7 @@ public class LoginPageTest {
     }
 
     @Test
+    //Попытка входа с неверными значениями
     public void loginWithIncorrectCredsTest(){
         LoginPage newLoginPage = loginPage.loginWithInvalidCreds("qweqwe","qweqwe");
         String error = newLoginPage.getErrorText();
@@ -36,6 +38,7 @@ public class LoginPageTest {
     }
 
     @Test
+    //Переход на страницу создания аккаунта
     public void createAccTest(){
         SignUpPage signUpPage = loginPage.createAccount();
         String heading = signUpPage.getHeadingText();
