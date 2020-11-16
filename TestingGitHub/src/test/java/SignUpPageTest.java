@@ -22,12 +22,14 @@ public class SignUpPageTest {
     }
 
     @Test
+    //Проверка того, что мы находимся на верной странице
     public void getHeadingTest(){
         String heading = signUpPage.getHeadingText();
         Assert.assertEquals("Create your account", heading);
     }
 
     @Test
+    //Проверка ввода пароля, который не удовлетворяет требованиям
     public void signUpWithShortPassTest(){
         SignUpPage sp = signUpPage.typePassword("qwe");
         String error = sp.getPasswordErrorText();
@@ -35,6 +37,7 @@ public class SignUpPageTest {
     }
 
     @Test
+    //Регистрация на email, который уже зарегистрирован
     public void signUpWithExistingEmailTest(){
         SignUpPage sp = signUpPage.typeEmail("mstitelnica1999@gmail.com");
         String error = sp.getEmailErrorText();
@@ -42,6 +45,7 @@ public class SignUpPageTest {
     }
 
     @Test
+    //Регистрация с логином пользовтаеля "username"
     public void signUpWithExistingUsernameTest(){
         String username = "username";
         SignUpPage sp = signUpPage.typeUserName(username);
