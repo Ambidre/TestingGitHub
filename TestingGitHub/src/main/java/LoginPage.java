@@ -14,7 +14,7 @@ public class LoginPage {
     private By loginField = By.xpath("//*[@id=\"login_field\"]");
     private By passwordField = By.xpath("//*[@id=\"password\"]");
     private By signInButton = By.xpath("//input[@type='submit']");
-    private By heading = By.xpath("//div[contains(@class, 'auth-form-header')]/h1");
+    private By heading = By.xpath("//span[text()='Welcome to GitHub!']");
     private By error = By.xpath("//*[@id='js-flash-container']//div[@class='container-lg px-2']");
     private By createAccLink = By.xpath("//a[text()='Create an account']");
 

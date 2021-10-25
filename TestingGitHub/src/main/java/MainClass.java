@@ -15,7 +15,7 @@ public class MainClass {
         driver.get("http://github.com");
 
         //MainPage mainPage = new MainPage(driver);
-        MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-        mainPage.register("amdftrye","rherhe@gdfh.com","dsfgdfh54fdhrdh");
+        //MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+        //mainPage.register("amdftrye","rherhe@gdfh.com","dsfgdfh54fdhrdh");
     }
 }

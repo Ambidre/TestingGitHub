@@ -41,8 +41,8 @@ public class LoginPageTest {
     //Переход на страницу создания аккаунта
     public void createAccTest(){
         SignUpPage signUpPage = loginPage.createAccount();
-        String heading = signUpPage.getHeadingText();
-        Assert.assertEquals("Create your account", heading);
+        String headingSignIn = signUpPage.getHeadingSignInText();
+        Assert.assertEquals("Welcome to GitHub!", headingSignIn);
     }
 
 

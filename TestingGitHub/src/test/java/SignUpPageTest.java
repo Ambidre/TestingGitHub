@@ -46,7 +46,7 @@ public class SignUpPageTest {
 
     @Test
     //Регистрация с логином пользовтаеля "username"
-    public void signUpWithExistingUsernameTest(){
+    public void signUpReservedUsernameTest(){
         String username = "username";
         SignUpPage sp = signUpPage.typeUserName(username);
         String error = sp.getUsernameErrorText();
